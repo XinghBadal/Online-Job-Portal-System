@@ -1,0 +1,373 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{604F350E-3C74-4B9E-8131-D4ADC9CBD40A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project_jobPortal</RootNamespace>
+    <AssemblyName>Project_jobPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44343</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADMIN\ChangePassword_Admin.aspx" />
+    <Content Include="ADMIN\HomeAdmin.aspx" />
+    <Content Include="ADMIN\LogoutAdmin.aspx" />
+    <Content Include="ADMIN\ManageJobPost.aspx" />
+    <Content Include="ADMIN\ManageJobRecruiter.aspx" />
+    <Content Include="ADMIN\ManageJobSeeker.aspx" />
+    <Content Include="ADMIN\Manage_City.aspx" />
+    <Content Include="ADMIN\Manage_Country.aspx" />
+    <Content Include="ADMIN\Manage_gender.aspx" />
+    <Content Include="ADMIN\Manage_JobLocation.aspx" />
+    <Content Include="ADMIN\Manage_JobProfile.aspx" />
+    <Content Include="ADMIN\Manage_Qualification.aspx" />
+    <Content Include="ADMIN\Manage_State.aspx" />
+    <Content Include="Footer.ascx" />
+    <Content Include="Header.ascx" />
+    <Content Include="images\item-pointer-mover.gif" />
+    <Content Include="images\item-pointer.gif" />
+    <Content Include="images\lava.gif" />
+    <Content Include="images\lava.png" />
+    <Content Include="images\main-bg.png" />
+    <Content Include="images\main-delimiter.png" />
+    <Content Include="JOBRECRUITER\ChangePassword_JobRecruiter.aspx" />
+    <Content Include="JOBRECRUITER\HomeJobRecruiter.aspx" />
+    <Content Include="JOBRECRUITER\JobPost_JobRecruiter.aspx" />
+    <Content Include="JOBRECRUITER\LogoutJobRecruiter.aspx" />
+    <Content Include="JOBRECRUITER\Registration_JobRecruiter.aspx" />
+    <Content Include="JOBSEEKER\ChangePassword_JobSeeker.aspx" />
+    <Content Include="JOBSEEKER\HomeJobSeeker.aspx" />
+    <Content Include="JOBSEEKER\LogoutJobSeeker.aspx" />
+    <Content Include="JOBSEEKER\Registration_JobSeeke.aspx" />
+    <Content Include="JOBSEEKER\ViewJobs.aspx" />
+    <Content Include="jquery.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="menu.css" />
+    <Content Include="menu.js" />
+    <Content Include="Web.config" />
+    <Content Include="Z0VkSGZZcg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADMIN\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\ChangePassword_Admin.aspx.cs">
+      <DependentUpon>ChangePassword_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\ChangePassword_Admin.aspx.designer.cs">
+      <DependentUpon>ChangePassword_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\HomeAdmin.aspx.cs">
+      <DependentUpon>HomeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\HomeAdmin.aspx.designer.cs">
+      <DependentUpon>HomeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\LogoutAdmin.aspx.cs">
+      <DependentUpon>LogoutAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\LogoutAdmin.aspx.designer.cs">
+      <DependentUpon>LogoutAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\ManageJobPost.aspx.cs">
+      <DependentUpon>ManageJobPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\ManageJobPost.aspx.designer.cs">
+      <DependentUpon>ManageJobPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\ManageJobRecruiter.aspx.cs">
+      <DependentUpon>ManageJobRecruiter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\ManageJobRecruiter.aspx.designer.cs">
+      <DependentUpon>ManageJobRecruiter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\ManageJobSeeker.aspx.cs">
+      <DependentUpon>ManageJobSeeker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\ManageJobSeeker.aspx.designer.cs">
+      <DependentUpon>ManageJobSeeker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\Manage_City.aspx.cs">
+      <DependentUpon>Manage_City.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\Manage_City.aspx.designer.cs">
+      <DependentUpon>Manage_City.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\Manage_Country.aspx.cs">
+      <DependentUpon>Manage_Country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\Manage_Country.aspx.designer.cs">
+      <DependentUpon>Manage_Country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\Manage_gender.aspx.cs">
+      <DependentUpon>Manage_gender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\Manage_gender.aspx.designer.cs">
+      <DependentUpon>Manage_gender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\Manage_JobLocation.aspx.cs">
+      <DependentUpon>Manage_JobLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\Manage_JobLocation.aspx.designer.cs">
+      <DependentUpon>Manage_JobLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\Manage_JobProfile.aspx.cs">
+      <DependentUpon>Manage_JobProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\Manage_JobProfile.aspx.designer.cs">
+      <DependentUpon>Manage_JobProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\Manage_Qualification.aspx.cs">
+      <DependentUpon>Manage_Qualification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\Manage_Qualification.aspx.designer.cs">
+      <DependentUpon>Manage_Qualification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\Manage_State.aspx.cs">
+      <DependentUpon>Manage_State.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\Manage_State.aspx.designer.cs">
+      <DependentUpon>Manage_State.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBRECRUITER\ChangePassword_JobRecruiter.aspx.cs">
+      <DependentUpon>ChangePassword_JobRecruiter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBRECRUITER\ChangePassword_JobRecruiter.aspx.designer.cs">
+      <DependentUpon>ChangePassword_JobRecruiter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBRECRUITER\HomeJobRecruiter.aspx.cs">
+      <DependentUpon>HomeJobRecruiter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBRECRUITER\HomeJobRecruiter.aspx.designer.cs">
+      <DependentUpon>HomeJobRecruiter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBRECRUITER\JobPost_JobRecruiter.aspx.cs">
+      <DependentUpon>JobPost_JobRecruiter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBRECRUITER\JobPost_JobRecruiter.aspx.designer.cs">
+      <DependentUpon>JobPost_JobRecruiter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBRECRUITER\JobRecruiter.Master.cs">
+      <DependentUpon>JobRecruiter.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBRECRUITER\JobRecruiter.Master.designer.cs">
+      <DependentUpon>JobRecruiter.Master</DependentUpon>
+    </Compile>
+    <Compile Include="JOBRECRUITER\LogoutJobRecruiter.aspx.cs">
+      <DependentUpon>LogoutJobRecruiter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBRECRUITER\LogoutJobRecruiter.aspx.designer.cs">
+      <DependentUpon>LogoutJobRecruiter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBRECRUITER\Registration_JobRecruiter.aspx.cs">
+      <DependentUpon>Registration_JobRecruiter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBRECRUITER\Registration_JobRecruiter.aspx.designer.cs">
+      <DependentUpon>Registration_JobRecruiter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBSEEKER\ChangePassword_JobSeeker.aspx.cs">
+      <DependentUpon>ChangePassword_JobSeeker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBSEEKER\ChangePassword_JobSeeker.aspx.designer.cs">
+      <DependentUpon>ChangePassword_JobSeeker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBSEEKER\HomeJobSeeker.aspx.cs">
+      <DependentUpon>HomeJobSeeker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBSEEKER\HomeJobSeeker.aspx.designer.cs">
+      <DependentUpon>HomeJobSeeker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBSEEKER\JobSeeker.Master.cs">
+      <DependentUpon>JobSeeker.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBSEEKER\JobSeeker.Master.designer.cs">
+      <DependentUpon>JobSeeker.Master</DependentUpon>
+    </Compile>
+    <Compile Include="JOBSEEKER\LogoutJobSeeker.aspx.cs">
+      <DependentUpon>LogoutJobSeeker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBSEEKER\LogoutJobSeeker.aspx.designer.cs">
+      <DependentUpon>LogoutJobSeeker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBSEEKER\Registration_JobSeeke.aspx.cs">
+      <DependentUpon>Registration_JobSeeke.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBSEEKER\Registration_JobSeeke.aspx.designer.cs">
+      <DependentUpon>Registration_JobSeeke.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JOBSEEKER\ViewJobs.aspx.cs">
+      <DependentUpon>ViewJobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JOBSEEKER\ViewJobs.aspx.designer.cs">
+      <DependentUpon>ViewJobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.Master" />
+    <Content Include="ADMIN\Admin.Master" />
+    <Content Include="JOBRECRUITER\JobRecruiter.Master" />
+    <Content Include="JOBSEEKER\JobSeeker.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49700</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44343/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
